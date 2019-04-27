@@ -9,8 +9,12 @@ trigger:
 pool:
   vmImage: 'Ubuntu-16.04'
 
--script: |
-    python -m pip install --upgrade pip setuptools wheel
+- script: |
+    echo Add other tasks to build, test, and deploy your project.
+    echo See https://aka.ms/yaml
+  displayName: 'Run a multi-line script'
+
+  - script: python -m pip install --upgrade pip setuptools wheel
   displayName: 'Install tools'
 
 - script: pip install -r requirements.txt
