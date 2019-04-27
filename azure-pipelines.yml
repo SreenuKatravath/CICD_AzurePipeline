@@ -18,7 +18,7 @@ steps:
     pip3 install -r requirements.txt
     virtualenv venv
     source venv/bin/activate
-    pip install django==2.2
+    pip install django
     django-admin --version
     pip install pytest
     pip install pytest-cov
