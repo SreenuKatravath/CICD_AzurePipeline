@@ -17,16 +17,11 @@ steps:
     sudo apt-get install python-virtualenv
     pip3 install -r requirements.txt
     virtualenv venv
+    source venv/bin/activate
+    pip install django
+    django-admin --version
   displayName: 'Install tools'
 
-- script: pip3 install -r requirements.txt
-  displayName: 'Install requirements'
-
-- script: virtualenv venv
-  displayName: 'Creating virtual environment'
-
-- script: source venv/bin/activate
-  displayName: 'Starting virtual environment'
   
 - script: python manage.py test
 
