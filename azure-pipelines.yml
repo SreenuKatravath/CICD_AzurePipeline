@@ -9,7 +9,8 @@ trigger:
 pool:
   vmImage: 'Ubuntu-16.04'
 
-- script: python -m pip install --upgrade pip setuptools wheel
+- script: |
+    python -m pip install --upgrade pip setuptools wheel
   displayName: 'Install tools'
 
 - script: pip install -r requirements.txt
