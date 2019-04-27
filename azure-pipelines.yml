@@ -18,12 +18,11 @@ steps:
     pip3 install -r requirements.txt
     virtualenv venv
     source venv/bin/activate
-    pip install django
+    pip install django==2.2
     django-admin --version
+    python -m pip install flake8
+    flake8 .
   displayName: 'Install tools'
-
-  
-- script: python manage.py test
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
