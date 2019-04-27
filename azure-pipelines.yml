@@ -22,7 +22,7 @@ steps:
     django-admin --version
     pip install pytest
     pip install pytest-cov
-    pytest tests --doctest-modules --junitxml=junit/test-results.xml --cov=com --cov-report=xml --cov-report=html
+    python -m pytest --doctest-modules --junitxml=junit/test-results.xml --cov=com --cov-report=xml --cov-report=html
   displayName: 'Install tools'
 
 - script: |
