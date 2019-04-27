@@ -10,13 +10,8 @@ pool:
   vmImage: 'Ubuntu-16.04'
 
 steps:
-- script: virtualenv venv
-  displayName: 'Creating virtual environment'
-
-- script: source venv/bin/activate
-  displayName: 'Starting virtual environment'
-  
-- script: python3 -m pip install --upgrade pip setuptools wheel
+- script: |
+    sudo apt-get install python3-pip
   displayName: 'Install tools'
 
 - script: pip install -r requirements.txt
