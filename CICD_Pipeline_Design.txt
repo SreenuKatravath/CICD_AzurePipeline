@@ -1,0 +1,7 @@
+CI/CD pipeline design: 
+
+1. Make changes to code 
+2. Commit code.
+3. Start a build on Azure Pipeline which creates an environment and installs all the requirements for the project before running the unit tests over the code. It also gives the output for test runs and coverage report on the Azure Pipeline Dashboard. Details of Azure Pipeline build run is in azure_pipelines.yml file.
+4. Notify user of the success/failure of the build on Azure CI/CD Pipeline via email.
+5. Deploy code to a server if it passes all test cases. <pending>
